@@ -1,0 +1,83 @@
+[2025-11-05 19:50:31,220][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2025-11-05 19:50:31,222][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-05 19:50:31,223][src.utils.rich_utils][WARNING] - Field 'callbacks' not found in config. Skipping 'callbacks' config printing...
+[2025-11-05 19:50:31,223][src.utils.rich_utils][WARNING] - Field 'logger' not found in config. Skipping 'logger' config printing...
+[2025-11-05 20:59:14,607][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2025-11-05 20:59:14,610][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-05 20:59:14,610][src.utils.rich_utils][WARNING] - Field 'callbacks' not found in config. Skipping 'callbacks' config printing...
+[2025-11-05 20:59:14,610][src.utils.rich_utils][WARNING] - Field 'logger' not found in config. Skipping 'logger' config printing...
+[2025-11-05 21:05:28,062][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2025-11-05 21:05:28,064][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-05 21:05:28,064][src.utils.rich_utils][WARNING] - Field 'callbacks' not found in config. Skipping 'callbacks' config printing...
+[2025-11-05 21:05:28,064][src.utils.rich_utils][WARNING] - Field 'logger' not found in config. Skipping 'logger' config printing...
+[2025-11-05 21:09:03,727][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2025-11-05 21:09:03,730][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-05 21:09:03,730][src.utils.rich_utils][WARNING] - Field 'callbacks' not found in config. Skipping 'callbacks' config printing...
+[2025-11-05 21:09:03,730][src.utils.rich_utils][WARNING] - Field 'logger' not found in config. Skipping 'logger' config printing...
+[2025-11-05 21:09:03,756][__main__][INFO] - Instantiating datamodule <src.data.anomaly_clip_datamodule.AnomalyCLIPDataModule>
+[2025-11-05 21:09:03,762][__main__][INFO] - Instantiating model <src.models.anomaly_clip_module.AnomalyCLIPModule>
+[2025-11-05 21:09:08,014][__main__][INFO] - Instantiating loggers...
+[2025-11-05 21:09:08,014][src.utils.instantiators][WARNING] - No logger configs found! Skipping...
+[2025-11-05 21:09:08,014][__main__][INFO] - Instantiating trainer <pytorch_lightning.trainer.Trainer>
+[2025-11-05 21:09:08,046][__main__][INFO] - Starting testing!
+[2025-11-05 21:09:08,049][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "/Users/vaibhav/dev/AnomalyCLIP-main/src/utils/utils.py", line 65, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "/Users/vaibhav/dev/AnomalyCLIP-main/src/eval.py", line 77, in evaluate
+    trainer.test(model=model, datamodule=datamodule, ckpt_path=cfg.ckpt_path)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 774, in test
+    return call._call_and_handle_interrupt(
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 816, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 961, in _run
+    _verify_loop_configurations(self)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/configuration_validator.py", line 41, in _verify_loop_configurations
+    __verify_eval_loop_configuration(model, "test")
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/configuration_validator.py", line 111, in __verify_eval_loop_configuration
+    raise NotImplementedError(
+NotImplementedError: Support for `test_epoch_end` has been removed in v2.0.0. `AnomalyCLIPModule` implements this method. You can use the `on_test_epoch_end` hook instead. To access outputs, save them in-memory as instance attributes. You can find migration examples in https://github.com/Lightning-AI/pytorch-lightning/pull/16520.
+[2025-11-05 21:09:08,051][src.utils.utils][INFO] - Output dir: /Users/vaibhav/dev/AnomalyCLIP-main/logs/eval/runs/2025-11-05_21-09-03
+[2025-11-05 21:18:42,195][src.utils.utils][INFO] - Enforcing tags! <cfg.extras.enforce_tags=True>
+[2025-11-05 21:18:42,197][src.utils.utils][INFO] - Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-05 21:18:42,197][src.utils.rich_utils][WARNING] - Field 'callbacks' not found in config. Skipping 'callbacks' config printing...
+[2025-11-05 21:18:42,197][src.utils.rich_utils][WARNING] - Field 'logger' not found in config. Skipping 'logger' config printing...
+[2025-11-05 21:18:42,223][__main__][INFO] - Instantiating datamodule <src.data.anomaly_clip_datamodule.AnomalyCLIPDataModule>
+[2025-11-05 21:18:42,227][__main__][INFO] - Instantiating model <src.models.anomaly_clip_module.AnomalyCLIPModule>
+[2025-11-05 21:18:46,079][__main__][INFO] - Instantiating loggers...
+[2025-11-05 21:18:46,079][src.utils.instantiators][WARNING] - No logger configs found! Skipping...
+[2025-11-05 21:18:46,079][__main__][INFO] - Instantiating trainer <pytorch_lightning.trainer.Trainer>
+[2025-11-05 21:18:46,109][__main__][INFO] - Starting testing!
+[2025-11-05 21:18:46,114][src.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/lightning_fabric/utilities/data.py", line 488, in __getattr__
+    return self[key]
+KeyError: 'image_tmpl'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/vaibhav/dev/AnomalyCLIP-main/src/utils/utils.py", line 65, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "/Users/vaibhav/dev/AnomalyCLIP-main/src/eval.py", line 77, in evaluate
+    trainer.test(model=model, datamodule=datamodule, ckpt_path=cfg.ckpt_path)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 774, in test
+    return call._call_and_handle_interrupt(
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 816, in _test_impl
+    results = self._run(model, ckpt_path=ckpt_path)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 973, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 108, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 199, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "/Users/vaibhav/dev/AnomalyCLIP-main/src/data/anomaly_clip_datamodule.py", line 97, in setup
+    imagefile_template=self.hparams.image_tmpl,
+  File "/opt/homebrew/Caskroom/miniconda/base/envs/anomaly_env/lib/python3.10/site-packages/lightning_fabric/utilities/data.py", line 490, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{key}'") from e
+AttributeError: 'AttributeDict' object has no attribute 'image_tmpl'
+[2025-11-05 21:18:46,116][src.utils.utils][INFO] - Output dir: /Users/vaibhav/dev/AnomalyCLIP-main/logs/eval/runs/2025-11-05_21-18-42

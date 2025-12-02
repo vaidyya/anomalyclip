@@ -1,0 +1,24 @@
+_target_: src.data.anomaly_clip_datamodule.AnomalyCLIPDataModule
+num_workers: 10
+pin_memory: False
+num_segments: 32
+seg_length: 16
+batch_size: 64
+batch_size_test: 1
+num_classes: 14
+input_size: 224
+load_from_features: True
+frames_root: "/tmp/UCFCrime/Image-Features/"
+frames_root_val: "/tmp/UCFCrime/Image-Features/"
+annotations_root: "/tmp/UCFCrime/Annotations/"
+annotation_file_anomaly: "/tmp/UCFCrime/Annotations/Anomaly_Train_Abnormal.txt"
+annotation_file_normal: "/tmp/UCFCrime/Annotations/Anomaly_Train_Normal.txt"
+annotation_file_test: "/tmp/UCFCrime/Annotations/Anomaly_Test.txt"
+annotation_file_temporal_test: "/tmp/UCFCrime/Temporal_Anomaly_Annotation_for_Testing_Videos.txt"
+labels_file: "${oc.env:PROJECT_ROOT}/data/ucf_labels.csv"
+# Required by model config interpolations
+stride: 1         # frame stride for windowing
+ncrops: 1         # number of test-time crops
+normal_id: 0      # index of the 'normal' class in probabilities
+spatialannotationdir_path:
+visualize: False
