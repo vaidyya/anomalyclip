@@ -24,7 +24,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Ollama Setup
 
 1.  **Install and Run Ollama**:
-    - **macOS/Linux**: 
+    - **macOS/Linux**:
         ```bash
         brew install ollama && ollama serve
         ```
@@ -90,10 +90,4 @@ The script will perform checks, set up the environment, and start the FastAPI se
 
 ## Configuration
 
-The behavior of the server can be configured through environment variables, which are set in the `start_dashboard.sh` and `start_dashboard.bat` scripts:
-
--   `ANOMALYCLIP_DEVICE`: The device to run the model on (`cpu`, `mps`, `cuda`).
--   `SERVE_INFER_INTERVAL`: The frame interval for running inference.
--   `SERVE_MAX_EMIT_FPS`: The maximum FPS for emitting results to the client.
--   `SERVE_MAX_WIDTH`: The maximum width of the video frames to be processed.
-
+The behavior of the server can be configured through environment variables, which are set in the `start_dashboard.sh` and `start_dashboard.bat` scripts: `ANOMALYCLIP_DEVICE`: The device to run the model on (`cpu`, `mps`, `cuda`). `SERVE_INFER_INTERVAL`: The frame interval for running inference. `SERVE_MAX_EMIT_FPS`: The maximum FPS for emitting results to the client. `SERVE_MAX_WIDTH`: The maximum width of the video frames to be processed.
